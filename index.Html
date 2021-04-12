@@ -16,20 +16,22 @@
         <!--Navbar-->
         <nav id="navbar">
             <div class="navbar__logo">
-               <i class="fab fa-diaspora"></i>
-                <a href="#">Della</a>
+              <i class="fab fa-diaspora" aria-hidden="true"></i>
+              <a href="#">Ellie</a>
             </div>
-            <div class="navbar__menu">
-                <ul class="navbar__menu">
-                    <li class="navbar__menu__item active">Home</li>
-                    <li class="navbar__menu__item">About</li>
-                    <li class="navbar__menu__item">Skills</li>
-                    <li class="navbar__menu__item">My work</li>
-                    <li class="navbar__menu__item">Testimonial</li>
-                    <li class="navbar__menu__item">Contact</li>
-                </ul>
-            </div>
-        </nav>
+            <ul class="navbar__menu">
+              <li class="navbar__menu__item active" data-link="#home">Home</li>
+              <li class="navbar__menu__item" data-link="#about">About</li>
+              <li class="navbar__menu__item" data-link="#skills">Skills</li>
+              <li class="navbar__menu__item" data-link="#work">My work</li>
+              <li class="navbar__menu__item" data-link="#testimonials">Testimonial</li>
+              <li class="navbar__menu__item" data-link="#contact">Contact</li>
+            </ul>
+            <!-- Toggle button -->
+            <button class="navbar__toggle-btn">
+              <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+          </nav>
         <!--Home-->
         <section id="home" class="section">
             <img src="imgs/profile.png" alt="della's profile photo" class="home__avatar">
