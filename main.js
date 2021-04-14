@@ -59,6 +59,13 @@ workBtnContainer.addEventListener("click",(event) =>{
     if(filter == null) {
         return;
     }
+    //클릭시 선택된거에 active 추가
+    const active = document.querySelector('.category__btn.selected');
+    active.classList.remove('selected');
+    const target = event.target.nodeName ==' BUTTON'? event.target : event.target.parentNode;
+                          
+    event.target.classList.add('selected');
+
     projectContainer.classList.add('anim-out');
     projects.forEach((project)=> {
         if(filter ==='*' || filter === project.dataset.type){
