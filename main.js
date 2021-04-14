@@ -12,13 +12,22 @@ document.addEventListener('scroll', () => {
     }
 });
 
-// navbar 메뉴 클릭시 스크롤링
 const navbarMenu = document.querySelector('.navbar__menu');
+// navbar 메뉴 클릭시 스크롤링
 navbarMenu.addEventListener('click', (event) => {
     const link = event.target.dataset.link;
-    if(link == null) return;
+    if(link == null) {
+        return;
+    }
+    navbarMenu.classList.remove('open');
     scrollIntoView(link);
 });
+
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click',() => {
+    navbarMenu.classList.toggle('open');
+})
+
 
 // contact me 클릭시 contact 화면으로
 const cntctBtn = document.querySelector('.home__contact');
