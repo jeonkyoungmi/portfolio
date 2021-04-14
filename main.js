@@ -26,6 +26,14 @@ cntctBtn.addEventListener('click', () => {
     scrollIntoView('#contact');
 });
 
+// scroll 내릴때마다 투명도 흐려지게 0 800= 0 400 800 = 0.5 800 = 800 1 1600 800 2 
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+    home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+
 function scrollIntoView(selector){
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior: "smooth"});
