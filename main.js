@@ -59,16 +59,19 @@ workBtnContainer.addEventListener("click",(event) =>{
     if(filter == null) {
         return;
     }
-    
+    projectContainer.classList.add('anim-out');
     projects.forEach((project)=> {
         if(filter ==='*' || filter === project.dataset.type){
-            project.classList.add('visible');
             project.classList.remove('invisible');
         } else {
             project.classList.add('invisible');
-            project.classList.remove('visible');
         }
     });
+
+    setTimeout(() => {
+        projectContainer.classList.remove('anim-out');
+    },300);
+
 });
 
 function scrollIntoView(selector){
