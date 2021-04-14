@@ -358,6 +358,13 @@ p {
   margin: 2px;
   background-color: var(--color-light-white);
 }
+.project.visible {
+  display: block;
+}
+
+.project.invisible {
+  display: none;
+}
 
 .project__img {
   max-width: 100%;
@@ -487,7 +494,6 @@ p {
 .arrow-up.visible {
   opacity: 1;
   display: block;
-  pointer-events: auto;
 }
 
 /* For below 768px screen width */
