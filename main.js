@@ -33,6 +33,21 @@ document.addEventListener('scroll', () => {
     home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
+//scroll 될때 원하는 arrow up button 생성
+const arrowUp = document.querySelector('.arrow-up');
+document.addEventListener('scroll',() => {
+    if(window.scrollY > homeHeight/2) {
+        arrowUp.classList.add('visible');
+    } else {
+        arrowUp.classList.remove('visible');
+    }
+});
+
+//arrow up 버튼 클릭시 홈위로
+
+arrowUp.addEventListener('click',() => {
+    scrollIntoView('#home');
+});
 
 function scrollIntoView(selector){
     const scrollTo = document.querySelector(selector);
